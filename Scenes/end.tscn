@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnnvn2rqpxuh3"]
+
+[ext_resource type="Texture2D" uid="uid://dmqo7i7jsfwo7" path="res://Sprites/Background/pixelback.jpg" id="1_ghqaq"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_js7e8"]
+[ext_resource type="FontFile" uid="uid://bcombklk25o7n" path="res://Fonts/Pixeled.ttf" id="2_8p1mb"]
+
+[node name="End" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_js7e8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 639.0
+offset_bottom = 360.0
+texture = ExtResource("1_ghqaq")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Reset" type="Button" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 209.0
+offset_right = 295.0
+offset_bottom = 273.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_8p1mb")
+theme_override_font_sizes/font_size = 20
+text = "Back To Menu"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 76.0
+offset_right = 568.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.769782, 0.782698, 0.683763, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_8p1mb")
+theme_override_font_sizes/font_size = 35
+text = "Congratulations"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]

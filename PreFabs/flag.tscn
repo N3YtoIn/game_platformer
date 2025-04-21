@@ -85,10 +85,9 @@ animations = [{
 size = Vector2(27, 44)
 
 [node name="Flag" type="Area2D"]
-position = Vector2(1860, 240)
+position = Vector2(1861, 240)
 script = ExtResource("1_per0o")
 scene = "res://Scenes/menu.tscn"
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kdyrn")
